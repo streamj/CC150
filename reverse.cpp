@@ -1,26 +1,16 @@
 #include <stdio.h>
 
-void reverse(char str[])
-{
-    int i = 0, j = 0;
-    char tmp;
-    if (str)
-    {
-        while (str[i] != '\0')
-        {
-            ++i;
-        }
-        --i;
-        while (j < i)
-        {
-            tmp = str[i];
-            str[i] = str[j];
-            str[j] = tmp;
-            i--;
-            j++;
-        }
-    }
-}
+void reverse(char *str) {  
+    char temp;  
+    int len = strlen(str);  
+    int i;  
+      
+    for (i = 0; i < len / 2; i++) {  
+        temp = str[i];  
+        str[i] = str[len - i - 1];  
+        str[len - i - 1] = temp;  
+    }  
+} 
 
 int main()
 {
