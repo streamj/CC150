@@ -1,3 +1,5 @@
+// to show it's a C-style string so use the '\0'
+
 #include <stdio.h>
 
 void reverse(char str[])
