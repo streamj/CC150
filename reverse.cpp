@@ -34,23 +34,22 @@ void reverse(char str[])
     }
 }
 
+void test(char str[])
+{
+    printf("%s\n", str);
+    reverse(str);
+    printf("%s\n", str);
+}
+
 int main()
 {
     char str[] = "abcdefghf";
     char str1[] = "";
     char str2[] = "a";
-
-    printf("%s\n", str);
-    reverse(str);
-    printf("%s\n", str);
-
-    printf("%s\n", str1);
-    reverse(str1);
-    printf("%s\n", str1);
-
-    printf("%s\n", str2);
-    reverse(str2);
-    printf("%s\n", str2);
+    
+    test(str);
+    test(str1);
+    test(str2);
     
     return 0;
 }
