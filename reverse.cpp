@@ -3,7 +3,6 @@
 #include <string.h>
 
 void reverse(char str[])
-
 {
     if (strlen(str) == 0)
     {
