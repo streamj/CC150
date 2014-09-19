@@ -4,6 +4,7 @@
 
 void reverse(char str[])
 {
+    if(sizeof(str) == 0) return;
     int i = 0, j = 0;
     char tmp;
     if (str)
