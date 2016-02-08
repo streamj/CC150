@@ -88,16 +88,6 @@ Node* linkAdder(Node* p, Node* q)
     return ret;
 }
 
-
-Node* revlinkAdder(Node* p, Node* q)
-{
-    if (p == nullptr) return q;
-    if (q == nullptr) return p;
-    if (p == nullptr && q == nullptr) return nullptr;
-
-
-}
-
 int main()
 {
     int a1[] = { 5, 6, 8 };
