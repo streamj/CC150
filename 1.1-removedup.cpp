@@ -19,26 +19,27 @@ string removeDup(string &str)
 void squeeze(char s[], int c)
 {
 	int i, j;
-	for (i = j = 0; s[i] != '\0'; i++) // 用 i 遍历字符串
-	if (s[i] != c)
-		s[j++] = s[i];// s[j] = s[i]; j++
-	// 大体是如果遇到是 c, i跳过这个, 如果不是 c 将字符赋给 j
-
-	s[j] = '\0'; // 末尾加'\0' 表示字符串结尾
+	for (i = j = 0; s[i] != '\0'; i++) {
+            if (s[i] != c){
+		s[j++] = s[i];
+            }
+        }
+	s[j] = '\0';
 }
 
 void removeDup(char s[])
 {
 	int len = strlen(s);
-	if (len < 2)
-		return;
+	if (len < 2) return;
 
 	int i, j, k;
-	for (i = 0; i < len; i++)
-	for (j = i + 1; j < len; j++)
-	if (s[j] == s[i])
-		s[j] = '0';
-
+	for (i = 0; i < len; i++) {
+            for (j = i + 1; j < len; j++){
+                if (s[j] == s[i]) {
+                    s[j] = '0';
+                }
+            }
+        }
 	squeeze(s, '0');
 }
 int main()

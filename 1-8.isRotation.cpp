@@ -32,7 +32,7 @@ int main()
 
     cout << s1 << "\n";
     cout << s2 << "\n";
-    
+
     if (isRotation(s1, s2)){
         cout << "yes" << endl;
     }
